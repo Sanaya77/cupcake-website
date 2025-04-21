@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wennie's Cupcakes</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Pink Theme */
+    :root {
+      --primary-pink: #ff69b4; /* Hot Pink */
+      --light-pink: #ffb6c1; /* Light Pink */
+      --dark-pink: #d1478a; /* Dark Pink */
+    }
+
+    /* Full Jumbotron Image */
+    .jumbotron {
+      background: url('cp.png') no-repeat center center/cover;
+      height: 100vh; /* Full-screen height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+      text-align: center;
+    }
+    
+    /* Dark overlay for readability */
+    .jumbotron::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    }
+    
+    /* Ensure content stays on top */
+    .jumbotron .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Navbar Pink Theme */
+    .navbar {
+      background-color: var(--primary-pink) !important;
+    }
+
+    /* Button Pink Theme */
+    .btn-primary {
+      background-color: var(--primary-pink);
+      border-color: var(--dark-pink);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--dark-pink);
+    }
+
+    /* Cards Section */
+    .card {
+      max-width: 250px; /* Smaller card width */
+      margin: auto; /* Center align */
+      border: 2px solid var(--primary-pink);
+    }
+
+    .card img {
+      height: 150px; /* Adjust image height */
+      object-fit: cover; /* Maintain aspect ratio */
+    }
+
+    /* Features Section */
+    .feature-card {
+      border: 2px solid var(--primary-pink);
+      background-color: var(--light-pink);
+      color: var(--dark-pink);
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: scale(1.05);
+    }
+
+    .feature-card h5 {
+      font-weight: bold;
+      color: var(--primary-pink);
+    }
+
+    .feature-card p {
+      color: var(--dark-pink);
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--primary-pink);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Wennie's Cupcakes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Cupcakes</a></li>
+            <li><a class="dropdown-item" href="#">Drinks</a></li>
+            <li><a class="dropdown-item" href="#">Special Offers</a></li>
+          </ul></li>
+          <li class="nav-item"><a class="nav-link" href="#">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          
+          <!-- Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Our Story</a></li>
+              <li><a class="dropdown-item" href="#">Our Team</a></li>
+              <li><a class="dropdown-item" href="#">Press</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+    <div class="content">
+      <h1 class="display-4 fw-bold">Welcome to Wennie's Cupcakes</h1>
+      <p class="lead">Dive into a sugary paradise!</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Treats Here!</a>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Cupcake Features</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="feature-card p-4 text-center border">
+          <h5>Fresh Ingredients</h5>
+          <p>We use only the finest and freshest ingredients in our cupcakes for that perfect taste.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="feature-card p-4 text-center border">
+          <h5>Customizable Flavors</h5>
+          <p>Choose your favorite flavors or get them custom-made for special occasions.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="feature-card p-4 text-center border">
+          <h5>Perfect for Any Occasion</h5>
+          <p>Our cupcakes are perfect for birthdays, weddings, and any celebration.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards Section -->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://th.bing.com/th/id/OIP.ECTnN_JYS5vG6dzaJ2xcBgHaKG?w=820&h=1118&rs=1&pid=ImgDetMain" class="card-img-top" alt="Cupcake">
+          <div class="card-body">
+            <h5 class="card-title text-pink">Choco-latte</h5>
+            <p class="card-text">Chocolate cupcake with a hint of coffee aroma</p>
+            <a href="#" class="btn btn-primary">Try it!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="sr.jpg" class="card-img-top" alt="Placeholder Image">
+          <div class="card-body">
+            <h5 class="card-title">Strawberry Delight</h5>
+            <p class="card-text">A perfect mixture of strawberry and vanilla to die forr</p>
+            <a href="#" class="btn btn-primary">Try it!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="o.jpg" class="card-img-top" alt="Placeholder Image">
+          <div class="card-body">
+            <h5 class="card-title">Tangy Orange</h5>
+            <p class="card-text">Sweet and sour oranges with gust of falvours</p>
+            <a href="#" class="btn btn-primary">Try it!</a>
+          </div>
+        </div>
+      </div>
+      <!-- Additional Cards (second line) -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="c.jpg" class="card-img-top" alt="Placeholder Image">
+          <div class="card-body">
+            <h5 class="card-title">Cool coconut</h5>
+            <p class="card-text">Fresh coconut baked cupcakes with love is all you need</p>
+            <a href="#" class="btn btn-primary">Try it!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="co.jpg" class="card-img-top" alt="Placeholder Image">
+          <div class="card-body">
+            <h5 class="card-title">Cookies and cream</h5>
+            <p class="card-text">The classic and fun cupcake kids love</p>
+            <a href="#" class="btn btn-primary">Try it!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="b.jpg" class="card-img-top" alt="Placeholder Image">
+          <div class="card-body">
+            <h5 class="card-title">Butterscotch magic</h5>
+            <p class="card-text">Caramelized cupcakes with crispy butterscotch frosting </p>
+            <a href="#" class="btn btn-primary">Try it!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Newsletter Signup -->
+<div class="container my-5">
+  <h3 class="text-center mb-3">Subscribe for Sweet Updates! 🍬</h3>
+  <form id="signupForm" class="row g-3 justify-content-center" novalidate>
+    
+    <div class="col-md-6">
+      <input type="text" class="form-control" id="name" placeholder="Your Name">
+    </div>
+    
+    <div class="col-md-6">
+      <input type="text" class="form-control" id="email" placeholder="Your Email">
+    </div>
+    
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </div>
+  </form>
+</div>
+
+
+
+  <!-- Footer -->
+  <footer class="footer text-center py-4">
+    <div class="container">
+      <p>&copy; 2023 Wennie's Cupcakes. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+  
+      // Newsletter form submit
+      document.getElementById('signupForm').addEventListener('submit', function (e) {
+        e.preventDefault(); // Stop form submission
+  
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+  
+        // Regex pattern for email
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+        // Validate name and email presence
+        if (!name || !email) {
+          alert("Please enter both name and email.");
+          return;
+        }
+  
+        // Additional simple '@' check (optional)
+        if (!email.includes('@')) {
+          alert("Email must include '@' symbol.");
+          return;
+        }
+  
+        // Validate email format
+        if (!emailPattern.test(email)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+  
+        // Success!
+        alert(`Thanks for subscribing, ${name}! 🎉`);
+        document.getElementById('signupForm').reset();
+      });
+  
+      // Cupcake button click event
+      const buttons = document.querySelectorAll('.btn-primary');
+  
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          // Avoid triggering form submit or link redirect
+          if (!btn.closest('form')) {
+            e.preventDefault();
+            alert("Thanks for choosing this cupcake! 🍰 We'll make it extra sweet!");
+          }
+        });
+      });
+  
+    });
+  </script>
+  
+  
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
